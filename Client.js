@@ -293,7 +293,7 @@ async function sendMessage(xmpp){
     })
 }
 
-
+//Handle notifications
 function Notifications(xmpp){
     console.log("**** Enviar/recibir notificaciones ****")
     console.log("\t- 1. Revisar solicitudes")
@@ -473,6 +473,7 @@ function LoginMenu(){
     })
 }
 
+//All stanzas handler
 function handleStanza(xmpp, stanza){
     if (stanza.is("presence")) {
         if(stanza.attrs.type === "subscribe"){
